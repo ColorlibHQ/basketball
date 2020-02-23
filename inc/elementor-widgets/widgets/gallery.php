@@ -165,7 +165,7 @@ class BASKETBALL_Gallery extends Widget_Base {
                                     $dynamic_class = !empty( $gallery['dynamic_class'] ) ? $gallery['dynamic_class'] : '';
                                     
                             ?>
-                            <a href="<?php echo wp_kses_post($gallery_img)[0];?>" class="grid-item <?php echo $dynamic_class;?> bg_img img-gal" style="background-image: url(<?php echo wp_kses_post($gallery_img[0]);?>)">
+                            <a href="<?php echo wp_kses_post($gallery_img[0]);?>" class="grid-item <?php echo $dynamic_class;?> bg_img img-gal" style="background-image: url(<?php echo wp_kses_post($gallery_img[0]);?>)">
                                 <div class="single_gallery_item">
                                     <div class="single_gallery_item_iner">
                                         <div class="gallery_item_text">
