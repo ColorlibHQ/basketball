@@ -32,7 +32,7 @@
                 <h2 class="p_title"><?php the_title(); ?></h2>
             </a>
             <?php
-            echo wpautop( wp_trim_words( get_the_content(), 28, '' ) );
+            echo wpautop( wp_trim_words( get_the_content(), 28, '...' ) );
 
             if( basketball_opt( 'basketball_blog_meta' ) == 1 ) {
 	            ?>
