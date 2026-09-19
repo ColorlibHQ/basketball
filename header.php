@@ -28,7 +28,7 @@
                   
                   ?>
                   <div class="col-md-8 col-xl-6">
-                      <div class="sub_header_social_icon float-right">
+                      <div class="sub_header_social_icon float-end">
                         <a href="tel:<?php echo esc_html( $phoneNumber ) ?>"><i class="flaticon-phone"></i><?php echo esc_html( $phoneNumber ) ?></a>
                         <a href="<?php echo esc_url( $regUrl );?>" class="register_icon"><i class="ti-arrow-right"></i><?php echo esc_html( $regLabel );?></a>
                       </div>
@@ -41,7 +41,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <nav class="navbar navbar-expand-lg navbar-light">
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
 

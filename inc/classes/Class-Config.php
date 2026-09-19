@@ -144,99 +144,92 @@
 			$scripts = array(
 				'style' => array(
 					array(
-						'handler'		=> 'google-font',
+						'handler'		=> 'basketball-theme-google-font',
 						'file' 			=> $this->google_font(),
 					),
 					array(
-						'handler'		=> 'bootstrap',
+						'handler'		=> 'basketball-theme-bootstrap',
 						'file' 			=> $cssPath.'bootstrap.min.css',
 						'dependency' 	=> array(),
-						'version' 		=> '1.0',
+						'version' 		=> '5.3.8-4',
 					),
 					array(
-						'handler'		=> 'font-awesome',
+						'handler'		=> 'basketball-theme-font-awesome',
 						'file' 			=> $cssPath.'font-awesome.min.css',
 						'dependency' 	=> array(),
-						'version' 		=> '1.0',
+						'version' 		=> '7.3.1-1',
 					),
 					array(
-						'handler'		=> 'animate',
+						'handler'		=> 'basketball-theme-animate',
 						'file' 			=> $cssPath.'animate.css',
 						'dependency' 	=> array(),
 						'version' 		=> '1.0',
 					),
 					array(
-						'handler'		=> 'owl-carousel',
+						'handler'		=> 'basketball-theme-owl-carousel',
 						'file' 			=> $cssPath.'owl.carousel.min.css',
 						'dependency' 	=> array(),
 						'version' 		=> '1.0',
 					),
 					array(
-						'handler'		=> 'themify-icons',
+						'handler'		=> 'basketball-theme-themify-icons',
 						'file' 			=> $cssPath.'themify-icons.css',
 						'dependency' 	=> array(),
 						'version' 		=> '1.0',
 					),
 					array(
-						'handler'		=> 'flaticon',
+						'handler'		=> 'basketball-theme-flaticon',
 						'file' 			=> $cssPath.'flaticon.css',
 						'dependency' 	=> array(),
 						'version' 		=> '1.0',
 					),
 					array(
-						'handler'		=> 'magnific-popup',
+						'handler'		=> 'basketball-theme-magnific-popup',
 						'file' 			=> $cssPath.'magnific-popup.css',
 						'dependency' 	=> array(),
 						'version' 		=> '1.0',
 					),
 					array(
-						'handler'		=> 'swiper.min',
+						'handler'		=> 'basketball-theme-swiper.min',
 						'file' 			=> $cssPath.'swiper.min.css',
 						'dependency' 	=> array(),
 						'version' 		=> '1.0',
 					),
 					array(
-						'handler'		=> 'default-css',
+						'handler'		=> 'basketball-theme-default-css',
 						'file' 			=> $cssPath.'default.css',
 						'dependency' 	=> array(),
 						'version' 		=> '1.0',
 					),
 					array(
-						'handler'		=> 'main-style',
+						'handler'		=> 'basketball-theme-main-style',
 						'file' 			=> $cssPath.'style.css',
 						'dependency' 	=> array(),
 						'version' 		=> $this->basketball_version,
 					),
 					array(
-						'handler'		=> 'basketball-style',
+						'handler'		=> 'basketball-theme-basketball-style',
 						'file' 			=> get_stylesheet_uri(),
 					),
 				),
 				
 				'scripts' => array(
 					array(
-						'handler'		=> 'popper',
-						'file' 			=> $jsPath.'popper.min.js',
-						'dependency' 	=> array( 'jquery' ),
-						'version' 		=> '4.0',
-						'in_footer' 	=> true
-					),
-					array(
-						'handler'		=> 'bootstrap',
+						'handler'		=> 'basketball-theme-bootstrap',
 						'file' 			=> $jsPath.'bootstrap.min.js',
 						'dependency' 	=> array( 'jquery' ),
-						'version' 		=> '4.3.1',
+						'version' 		=> '5.3.8-4',
 						'in_footer' 	=> true
 					),
 					array(
-						'handler'		=> 'aos',
+						'handler'		=> 'basketball-theme-aos',
 						'file' 			=> $jsPath.'aos.js',
 						'dependency' 	=> array( 'jquery' ),
 						'version' 		=> '1.0',
 						'in_footer' 	=> true
 					),
 					array(
-						'handler'		=> 'jquery-magnific-popup',
+						'handler'		=> 'basketball-theme-jquery-magnific-popup',
 						'file' 			=> $jsPath.'jquery.magnific-popup.js',
 						'dependency' 	=> array( 'jquery' ),
 						'version' 		=> '1.0',
@@ -250,30 +243,23 @@
 						'in_footer' 	=> true
 					),
 					array(
-						'handler'		=> 'swiper-min',
+						'handler'		=> 'basketball-theme-swiper-min',
 						'file' 			=> $jsPath.'swiper.min.js',
 						'dependency' 	=> array( 'jquery' ),
 						'version' 		=> '1.0',
 						'in_footer' 	=> true
 					),
 					array(
-						'handler'		=> 'masonry-pkgd',
-						'file' 			=> $jsPath.'masonry.pkgd.js',
-						'dependency' 	=> array( 'jquery' ),
-						'version' 		=> '1.0',
-						'in_footer' 	=> true
-					),
-					array(
-						'handler'		=> 'owl-carousel',
+						'handler'		=> 'basketball-theme-owl-carousel',
 						'file' 			=> $jsPath.'owl.carousel.min.js',
 						'dependency' 	=> array( 'jquery' ),
 						'version' 		=> '1.0',
 						'in_footer' 	=> true
 					),
 					array(
-						'handler'		=> 'basketball-custom',
+						'handler'		=> 'basketball-theme-basketball-custom',
 						'file' 			=> $jsPath.'custom.js',
-						'dependency' 	=> array( 'jquery' ),
+						'dependency' 	=> array( 'jquery', 'masonry', 'jquery-form' ),
 						'version' 		=> $this->basketball_version,
 						'in_footer' 	=> true
 					),
