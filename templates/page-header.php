@@ -1,5 +1,5 @@
 <div class="row narrow">
-    <div class="col-full s-content__header aos-init aos-animate" data-aos="fade-up">
+    <div class="col-full s-content__header">
         <?php 
         if ( is_archive() ){
             the_archive_title('<h1>', '</h1>');

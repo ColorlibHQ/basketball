@@ -14,7 +14,7 @@ if( !defined( 'ABSPATH' ) ){
 
 ?>
 
-	<article id="post_<?php the_ID(); ?>" <?php post_class('masonry__brick entry format-audio'); ?> data-aos="fade-up">
+	<article id="post_<?php the_ID(); ?>" <?php post_class('masonry__brick entry format-audio'); ?>>
 		<?php 
 		/**
 		 * Blog Post thumbnail

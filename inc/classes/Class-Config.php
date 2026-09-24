@@ -222,13 +222,6 @@
 						'in_footer' 	=> true
 					),
 					array(
-						'handler'		=> 'basketball-theme-aos',
-						'file' 			=> $jsPath.'aos.js',
-						'dependency' 	=> array(),
-						'version' 		=> '1.0',
-						'in_footer' 	=> true
-					),
-					array(
 						'handler'		=> 'basketball-theme-swiper-min',
 						'file' 			=> $jsPath.'swiper.min.js',
 						'dependency' 	=> array(),

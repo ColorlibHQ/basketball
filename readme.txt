@@ -61,10 +61,6 @@ slick
     -- Licensed under the MIT license.
 
  
-AOS js 
-    -- Copyright (c) 2015 Michał Sajnóg https://michalsnik.github.io/aos/
-    -- Under The MIT License (MIT)
-
 Lity - v1.6.6 - 2016-04-22
     -- http://sorgalla.com/lity/
     -- Copyright (c) 2016 Jan Sorgalla; Licensed MIT
