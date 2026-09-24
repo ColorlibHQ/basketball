@@ -236,13 +236,6 @@
 						'in_footer' 	=> true
 					),
 					array(
-						'handler'		=> 'instagramFeed',
-						'file' 			=> $jsPath.'jquery.instagramFeed.min.js',
-						'dependency' 	=> array( 'jquery' ),
-						'version' 		=> '1.0',
-						'in_footer' 	=> true
-					),
-					array(
 						'handler'		=> 'basketball-theme-swiper-min',
 						'file' 			=> $jsPath.'swiper.min.js',
 						'dependency' 	=> array( 'jquery' ),
@@ -257,10 +250,17 @@
 						'in_footer' 	=> true
 					),
 					array(
+						'handler'		=> 'basketball-ui-js',
+						'file' 			=> $jsPath.'colorlib-ui.js',
+						'dependency' 	=> array(),
+						'version' 		=> '2.1.1',
+						'in_footer' 	=> true
+					),
+					array(
 						'handler'		=> 'basketball-theme-basketball-custom',
 						'file' 			=> $jsPath.'custom.js',
-						'dependency' 	=> array( 'jquery', 'masonry', 'jquery-form' ),
-						'version' 		=> $this->basketball_version,
+						'dependency' 	=> array( 'jquery', 'masonry', 'jquery-form', 'basketball-ui-js' ),
+						'version' 		=> $this->basketball_version . '-s1',
 						'in_footer' 	=> true
 					),
 
