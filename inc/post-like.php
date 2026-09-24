@@ -10,7 +10,7 @@
 add_action( 'wp_enqueue_scripts', 'basketball_sl_enqueue_scripts' );
 function basketball_sl_enqueue_scripts() {
 
-	wp_enqueue_script( 'basketball-post-likes', BASKETBALL_DIR_JS_URI . 'post-likes.js', array( 'jquery' ), '0.5', false );
+	wp_enqueue_script( 'basketball-post-likes', BASKETBALL_DIR_JS_URI . 'post-likes.js', array( 'basketball-ui-js' ), '0.5-s2', true );
 
 	wp_localize_script( 'basketball-post-likes', 'simpleLikes', array(
 		'ajaxurl' => admin_url( 'admin-ajax.php' ),

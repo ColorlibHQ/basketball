@@ -29,7 +29,7 @@ class BASKETBALL_Tutorial extends Widget_Base {
         parent::__construct($data, $args);
 
         // basketball swiper-custom js
-        wp_register_script( 'swiper-custom-basb', BASKETBALL_DIR_ELEMENTOR . 'assets/js/swiper_custom.js', array('jquery'), '1.0', true );
+        wp_register_script( 'swiper-custom-basb', BASKETBALL_DIR_ELEMENTOR . 'assets/js/swiper_custom.js', array( 'basketball-theme-swiper-min' ), '1.0', true );
      }
   
     public function get_script_depends() {
@@ -173,37 +173,42 @@ class BASKETBALL_Tutorial extends Widget_Base {
         if( \Elementor\Plugin::$instance->editor->is_edit_mode() === true  ) {
         ?>
         <script>
-        ( function( $ ){
-
-
-            var galleryTop = new Swiper('.gallery-top', {
-                spaceBetween: 0,
-                
-                navigation: {
-                nextEl: '.navigationHide',
-                prevEl: '.navigationHide',
-                },
-                autoplay: true,
-                loop: true,
-                loopedSlides: 4,
-                speed: 1000,
-                autoplayDisableOnInteraction:true,
-                
-            });
-            var galleryThumbs = new Swiper('.gallery-thumbs', {
-                spaceBetween: 0,
-                centeredSlides: true,
-                slidesPerView: 4,
-                touchRatio: 0.2,
-                slideToClickedSlide: true,
-                loop: true,
-                loopedSlides: 4
-            });
-            galleryTop.controller.control = galleryThumbs;
-            galleryThumbs.controller.control = galleryTop;
-            
-
-        })(jQuery);
+        (function () {
+            function run() {
+                // Swiper 4 (plain JS). Skipped when there is no slider yet, or
+                // swiper_custom.js has already started this one.
+                var slider = document.querySelector('.gallery-top');
+                if (!window.Swiper || !slider || slider.swiper) return;
+                var galleryTop = new Swiper('.gallery-top', {
+                    spaceBetween: 0,
+                    navigation: {
+                        nextEl: '.navigationHide',
+                        prevEl: '.navigationHide'
+                    },
+                    autoplay: true,
+                    loop: true,
+                    loopedSlides: 4,
+                    speed: 1000,
+                    autoplayDisableOnInteraction: true
+                });
+                var galleryThumbs = new Swiper('.gallery-thumbs', {
+                    spaceBetween: 0,
+                    centeredSlides: true,
+                    slidesPerView: 4,
+                    touchRatio: 0.2,
+                    slideToClickedSlide: true,
+                    loop: true,
+                    loopedSlides: 4
+                });
+                galleryTop.controller.control = galleryThumbs;
+                galleryThumbs.controller.control = galleryTop;
+            }
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', run);
+            } else {
+                run();
+            }
+        })();
         </script>
         <?php 
         }

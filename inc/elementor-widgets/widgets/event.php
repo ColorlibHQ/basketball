@@ -208,21 +208,15 @@ class BASKETBALL_Event extends Widget_Base {
         if( \Elementor\Plugin::$instance->editor->is_edit_mode() === true  ) {
         ?>
         <script>
-        ( function( $ ){
-
-
-                $('.portfolio-filter ul li').on('click', function () {
-                    $('.portfolio-filter ul li').removeClass('active');
-                    $(this).addClass('active');
-
-                    var data = $(this).attr('data-filter');
-                    $workGrid.isotope({
-                        filter: data
-                    });
-                });
-
+        (function () {
+            function run() {
+                var UI = window.ColorlibUI;
+                if (!UI) return;
+                // Portfolio filter. This theme prints no #portfolio or
+                // .portfolio-filter markup, so in practice nothing runs.
+                var grids = [];
                 if (document.getElementById('portfolio')) {
-                    var $workGrid = $('.portfolio-grid').isotope({
+                    grids = UI.isotope('.portfolio-grid', {
                         itemSelector: '.all',
                         percentPosition: true,
                         masonry: {
@@ -230,9 +224,29 @@ class BASKETBALL_Event extends Widget_Base {
                         }
                     });
                 }
-            
 
-        })(jQuery);
+                UI.toElements('.portfolio-filter ul li').forEach(function (item) {
+                    item.addEventListener('click', function () {
+                        UI.toElements('.portfolio-filter ul li').forEach(function (li) {
+                            li.classList.remove('active');
+                        });
+                        item.classList.add('active');
+
+                        var data = item.getAttribute('data-filter');
+                        grids.forEach(function (grid) {
+                            grid.arrange({
+                                filter: data
+                            });
+                        });
+                    });
+                });
+            }
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', run);
+            } else {
+                run();
+            }
+        })();
         </script>
         <?php 
         }

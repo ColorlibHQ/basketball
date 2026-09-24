@@ -170,34 +170,38 @@ class BASKETBALL_Player extends Widget_Base {
         if( \Elementor\Plugin::$instance->editor->is_edit_mode() === true  ) {
         ?>
         <script>
-        ( function( $ ){
-
-            var review = $('.player_info_item');
-            if (review.length) {
-                review.owlCarousel({
-                items: 1,
-                loop: true,
-                dots: false,
-                autoplay: true,
-                margin: 40,
-                autoplayHoverPause: true,
-                autoplayTimeout:5000,
-                nav: false,
-                responsive:{
-                    0:{
-                    margin: 15
-                    },
-                    600:{
-                    margin: 10
-                    },
-                    1000:{
-                    margin: 10
+        (function () {
+            function run() {
+                var UI = window.ColorlibUI;
+                if (!UI) return;
+                UI.owl('.player_info_item', {
+                    items: 1,
+                    loop: true,
+                    dots: false,
+                    autoplay: true,
+                    margin: 40,
+                    autoplayHoverPause: true,
+                    autoplayTimeout: 5000,
+                    nav: false,
+                    responsive: {
+                        0: {
+                            margin: 15
+                        },
+                        600: {
+                            margin: 10
+                        },
+                        1000: {
+                            margin: 10
+                        }
                     }
-                }
                 });
             }
-            
-        })(jQuery);
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', run);
+            } else {
+                run();
+            }
+        })();
         </script>
         <?php 
         }

@@ -294,15 +294,13 @@ if ( !class_exists( 'BASKETBALL_El_Widgets' ) ) {
             // googleapis js
             wp_register_script( 'maps-googleapis', '//maps.googleapis.com/maps/api/js?key='.esc_attr( $apiKey ) );
 
-            // ajaxchimp js
-            wp_enqueue_script( 'jquery-ajaxchimp', BASKETBALL_DIR_ELEMENTOR . 'assets/js/jquery.ajaxchimp.min.js', array('jquery'), '1.0', true );
 
 
             // basketball map custom js
-            wp_register_script( 'basketball-map-custom', BASKETBALL_DIR_ELEMENTOR . 'assets/js/map-custom.js', array('jquery'), '1.0', true );
+            wp_register_script( 'basketball-map-custom', BASKETBALL_DIR_ELEMENTOR . 'assets/js/map-custom.js', array(), '1.0-s2', true );
 
             // basketball companion main js
-            wp_enqueue_script( 'basketball', BASKETBALL_DIR_ELEMENTOR . 'assets/js/basketball-companion-main.js', array( 'jquery', 'jquery-ui-datepicker' ), '1.0', true );
+            wp_enqueue_script( 'basketball', BASKETBALL_DIR_ELEMENTOR . 'assets/js/basketball-companion-main.js', array( 'basketball-ui-js' ), '1.0-s2', true );
 
 
             wp_localize_script( 'basketball', 'ajax_object',

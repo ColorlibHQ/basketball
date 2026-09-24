@@ -307,18 +307,25 @@ class BASKETBALL_Single_Player extends Widget_Base {
         if( \Elementor\Plugin::$instance->editor->is_edit_mode() === true  ) {
         ?>
         <script>
-        ( function( $ ){
-
-            // $('.testimonial').owlCarousel({
-            //     items: 1,
-            //     loop: true,
-            //     margin: 30,
-            //     autoplayHoverPause: true,
-            //     smartSpeed:500,
-            //     dots: true
-            // });
-            
-        })(jQuery);
+        (function () {
+            function run() {
+                var UI = window.ColorlibUI;
+                if (!UI) return;
+                // UI.owl('.testimonial', {
+                //     items: 1,
+                //     loop: true,
+                //     margin: 30,
+                //     autoplayHoverPause: true,
+                //     smartSpeed:500,
+                //     dots: true
+                // });
+            }
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', run);
+            } else {
+                run();
+            }
+        })();
         </script>
         <?php 
         }

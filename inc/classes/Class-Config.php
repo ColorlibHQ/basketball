@@ -217,50 +217,36 @@
 					array(
 						'handler'		=> 'basketball-theme-bootstrap',
 						'file' 			=> $jsPath.'bootstrap.min.js',
-						'dependency' 	=> array( 'jquery' ),
+						'dependency' 	=> array(),
 						'version' 		=> '5.3.8-4',
 						'in_footer' 	=> true
 					),
 					array(
 						'handler'		=> 'basketball-theme-aos',
 						'file' 			=> $jsPath.'aos.js',
-						'dependency' 	=> array( 'jquery' ),
-						'version' 		=> '1.0',
-						'in_footer' 	=> true
-					),
-					array(
-						'handler'		=> 'basketball-theme-jquery-magnific-popup',
-						'file' 			=> $jsPath.'jquery.magnific-popup.js',
-						'dependency' 	=> array( 'jquery' ),
+						'dependency' 	=> array(),
 						'version' 		=> '1.0',
 						'in_footer' 	=> true
 					),
 					array(
 						'handler'		=> 'basketball-theme-swiper-min',
 						'file' 			=> $jsPath.'swiper.min.js',
-						'dependency' 	=> array( 'jquery' ),
-						'version' 		=> '1.0',
-						'in_footer' 	=> true
-					),
-					array(
-						'handler'		=> 'basketball-theme-owl-carousel',
-						'file' 			=> $jsPath.'owl.carousel.min.js',
-						'dependency' 	=> array( 'jquery' ),
+						'dependency' 	=> array(),
 						'version' 		=> '1.0',
 						'in_footer' 	=> true
 					),
 					array(
 						'handler'		=> 'basketball-ui-js',
-						'file' 			=> $jsPath.'colorlib-ui.js',
+						'file' 			=> $jsPath . ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? 'colorlib-ui.js' : 'colorlib-ui.min.js' ),
 						'dependency' 	=> array(),
-						'version' 		=> '2.1.1',
+						'version' 		=> '3.0.0',
 						'in_footer' 	=> true
 					),
 					array(
 						'handler'		=> 'basketball-theme-basketball-custom',
 						'file' 			=> $jsPath.'custom.js',
-						'dependency' 	=> array( 'jquery', 'masonry', 'jquery-form', 'basketball-ui-js' ),
-						'version' 		=> $this->basketball_version . '-s1',
+						'dependency' 	=> array( 'masonry', 'basketball-ui-js' ),
+						'version' 		=> $this->basketball_version . '-s2',
 						'in_footer' 	=> true
 					),
 
